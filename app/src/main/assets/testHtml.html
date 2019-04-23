@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script language="javascript">
+function validClick() {
+    valid.performClick();
+    document.getElementById("ok").value = "start";
+}
+function refuseClick(){
+    refuse.performClick();
+    document.getElementById("no").value = "Je refuse";
+}
+</script>
+<div>
+<button type="button" id="ok"
+    style="font-weight: 700; margin-right: 20px;" onclick="validClick();">Start</button>
+
+</div>
+</body>
+</html>

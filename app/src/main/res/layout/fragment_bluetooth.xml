@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/defalut_margin"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/btn_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_enable_bluetooth"
+            style="@style/IndexButton"
+            android:text="Enable bluetooth" />
+
+        <Button
+            android:id="@+id/btn_search_bluetooth"
+            style="@style/IndexButton"
+            android:layout_below="@+id/btn_enable_bluetooth"
+            android:text="Search bluetooth devices" />
+
+        <Button
+            android:id="@+id/btn_searchable"
+            style="@style/IndexButton"
+            android:layout_below="@+id/btn_enable_bluetooth"
+            android:text="Enable bluetooth discovery" />
+
+        <Button
+            android:id="@+id/btn_scan_bt"
+            style="@style/IndexButton"
+            android:layout_below="@+id/btn_enable_bluetooth"
+            android:text="Scan NearBy Bluetooth devices" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/btn_set">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_bluetooth_prop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shape_text_speech"
+                android:padding="@dimen/defalut_margin"
+                android:text="@string/txt_bt_placeholder"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

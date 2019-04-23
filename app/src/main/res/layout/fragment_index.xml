@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="name"
+            type="java.lang.String"/>
+        <variable
+            name="onclick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/defalut_margin"
+        android:paddingRight="@dimen/defalut_margin">
+
+        <TextView
+            android:id="@+id/tv_heading"
+            style="@style/headingText"
+            android:text="@{name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dkgrey" />
+        <Button
+            android:id="@+id/btn_chatbot_with_mic_sample"
+            style="@style/IndexButton"
+            android:onClick="@{onclick}"
+            android:text="Chatbot with mic" />
+
+        <Button
+            android:id="@+id/btn_chatbot"
+            style="@style/IndexButton"
+            android:onClick="@{onclick}"
+            android:text="@string/chat_bot" />
+
+        <Button
+            android:id="@+id/btn_speech_recognition"
+            style="@style/IndexButton"
+            android:onClick="@{onclick}"
+            android:text="@string/speech_recognition" />
+
+        <Button
+            android:id="@+id/btn_chatbot_sample"
+            style="@style/IndexButton"
+            android:onClick="@{onclick}"
+            android:text="@string/sample" />
+
+
+        <Button
+            android:id="@+id/btn_bluetoothPOC"
+            style="@style/IndexButton"
+            android:onClick="@{onclick}"
+            android:text="Bluetooth POC" />
+
+
+    </LinearLayout>
+</layout>

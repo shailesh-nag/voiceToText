@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatBotDemo</title>
+    <script type="text/javascript">
+/*<![CDATA[*/
+
+        function callFromApp() {
+            var component = document.getElementById("messageField");
+            component.value = component.value + "JavaScript called from app!\n";
+        }
+
+        function callWithData(a) {
+            var component = document.getElementById("messageField");
+            component.value = component.value + a+"\n";
+           // sendChat();
+        }
+
+        function callFromAppWithReturn() {
+            return 'Hello from JavaScript';
+        }
+
+
+        function sendChat()
+        {
+             console.log("method called");
+             var msg = document.getElementById("messageField").value;
+             var prev = document.getElementById("messageShow").innerHTML;
+             if(prev != ""){
+              console.log("Text is EMpty");
+             document.getElementById("messageShow").innerHTML = prev + "<BR>" + msg;
+             }
+             else  document.getElementById("messageShow").innerHTML = msg;
+
+             console.log("message typed is " + msg);
+            document.getElementById("messageField").value = ""
+        }
+
+
+/*]]>*/
+</script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 20px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 56%; margin-right: .5%; }
+      form button { width: 20%; background: rgb(130, 224, 255); border: none; padding: 8px; margin:2px }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+</head>
+<body>
+<p id="messageShow"></p>
+<form >
+    <input id="messageField" autocomplete="off" /><button id="test" type="button" onclick="sendChat()">Send1</button>
+    <button type="button" id="ok" onclick="interface.callVoiceRecorderAndroid()">Record</button>
+</form>
+
+</body>
+</html>

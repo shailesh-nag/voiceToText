@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebViewCommunication</title>
+<script type="text/javascript">
+/*<![CDATA[*/
+function callFromApp() {
+	var component = document.getElementById("input");
+	component.value = component.value + "JavaScript called from app!\n";
+}
+function callWithData(a) {
+	var component = document.getElementById("input");
+	component.value = component.value + a+"\n";
+}
+function callFromAppWithReturn() {
+	return 'Hello from JavaScript';
+}
+/*]]>*/
+</script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 20px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 56%; margin-right: .5%; }
+      form button { width: 20%; background: rgb(130, 224, 255); border: none; padding: 8px; margin:2px }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+</head>
+<body>
+<p></p>
+<a href="tanelikorri://toast/">Custom protocol URL</a>
+</p>
+<p>
+<button onclick="interface.callFromJS()">JavaScript interface</button>
+
+</p>
+<p>
+<textarea rows="5" cols="30" id="input"></textarea>
+</p>
+
+</body>
+</html>
